@@ -34,9 +34,8 @@ const User = db.define('user', {
 
 const Player = db.define('player', {
   name: {
-    type: Sequelize.STRING(256),
-    allowNull: false,
-    unique: true,
+    type: Sequelize.STRING(512),
+    allowNull: false,  
   },
   year: {
     type: Sequelize.INTEGER,
