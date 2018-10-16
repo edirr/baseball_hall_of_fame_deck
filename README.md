@@ -20,6 +20,10 @@ As a user, I want to view that singular card with a picture of the player, stati
 - As a user, I want to easily navigate to desired page by using navigation in the header of each page. 
 
 
+**The technical parts...**
+The front end will be built using React, Bulma, and custom CSS stylings.  The UI will resemble that of a baseball card, where the user can reference stats of Hall of Fame baseball players.  The backend will consist of a database with two tables, a user table (with email and password authentication), and players (their names, year inducted, primary team, and picture).  The statistics will be fetched from a stats API maintained by Major League Baseball.  The connection of data to components will be made through Express, Node, and React Router.
+
+
 **Please refer to the ARTIFACTS folder for further documentation about our project.**
 
 
