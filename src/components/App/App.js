@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 import logo from './logo.svg';
+import SearchFrom from '../SearchForm/SearchForm.js';
+import 'bulma';
 import './style.css';
 
 class App extends Component {
@@ -9,6 +11,7 @@ class App extends Component {
   render() {
     const { className, ...props } = this.props;
     return (
+      <div>
       <div className={classnames('App', className)} {...props}>
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -25,6 +28,8 @@ class App extends Component {
         <br />
         <button onClick={this.props.actions.dbTest}>Test if Express and Sequelize are working</button>
         <div style={{ padding: '30px' }}>{this.props.results}</div>
+      </div>
+      <SearchFrom/>
       </div>
     );
   }
