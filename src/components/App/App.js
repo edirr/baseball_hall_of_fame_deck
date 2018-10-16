@@ -34,6 +34,8 @@ class App extends Component {
         </button>
         <div style={{ padding: "30px" }}>{this.props.results}</div>
       </div>
+      <SearchFrom/>
+      </div>
     );
   }
 }
