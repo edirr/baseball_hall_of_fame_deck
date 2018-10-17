@@ -1,57 +1,26 @@
 {
   "name": "baseball-hof-deck",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Digital Baseball Card App",
+  "main": "server.js",
+  "repository": "https://git.generalassemb.ly/team-b/baseball-hof-deck",
+  "author": "Daniel McKemie, Eric Dirr, Misha Holzman",
+  "license": "MIT",
+
   "dependencies": {
-    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
-    "bulma": "^0.7.2",
-    "bulma-start": "^0.0.2",
-    "classnames": "^2.2.6",
-    "concurrently": "^4.0.1",
-    "debug": "^4.1.0",
-    "dotenv": "^6.1.0",
     "express": "^4.16.4",
-    "morgan": "^1.9.1",
-    "node-sass": "^4.9.4",
-    "nodemon": "^1.18.4",
-    "pg": "^7.5.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.3.1",
-    "react-router-redux": "^4.0.8",
-    "react-scripts": "^2.0.5",
-    "redux": "^4.0.1",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "sequelize": "^4.39.1",
-    "yargs": "^12.0.2"
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.4",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"nodemon server\"",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "seed": "node db/seed.js",
-    "db": "psql -d baseballdb",
-    "db:init": "dropdb --if-exists baseballdb && createdb baseballdb",
-    "db:reset": "node scripts/resetDB",
-    "db:seed": "node scripts/seedDB"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "chalk": "^2.4.1",
-    "path": "^0.12.7",
-    "react-dev-utils": "^6.0.5"
-  },
-  "proxy": "http://localhost:8000"
+    "start": "nodemon server.js"
+  }
 }
