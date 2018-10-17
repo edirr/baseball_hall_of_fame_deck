@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 
 // Construct password confirmation
 class SignUp extends Component {
@@ -26,14 +26,11 @@ class SignUp extends Component {
       password: this.state.password,
     };
 
-    console.log(newUser)
-  }
-
-    // axios
-    //   .post('/api/users/register', newUser)
-    //   .then(res => console.log(res.data))
-    //   .catch(err => this.setState({ errors: err.response.data }));
-    // }
+    axios
+      .post('/api/users/register', newUser)
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err.response.data))
+    }
   
   render() {
     const { errors } = this.state;

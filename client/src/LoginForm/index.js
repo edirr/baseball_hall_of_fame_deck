@@ -12,6 +12,8 @@ class LoginForm extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  // If you write onChange type functions with arrow
+  // syntax, you don't need the .bind(this)
   onSubmit(e) {
     e.preventDefault();
 
