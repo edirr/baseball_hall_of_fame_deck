@@ -16,6 +16,7 @@ export const store = createStore(rootReducer, middleware);
 ReactDOM.render(
   <Provider store={store}>
     <Routes />
+    <p>Dude</p>
   </Provider>,
   document.getElementById('root')
 );
