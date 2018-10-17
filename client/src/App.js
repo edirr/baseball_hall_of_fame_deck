@@ -10,7 +10,9 @@ import NotFound from './NotFound';
 import './App.css';
 import 'bulma';
 
-import Nav from './Nav'
+import Nav from './Nav';
+import LoginForm from './LoginForm';
+import SignUp from './SignUp'
 
 class App extends Component {
   render() {
@@ -33,6 +35,7 @@ class App extends Component {
       </BrowserRouter>
     );
   }
+
 }
 
 export default App;
