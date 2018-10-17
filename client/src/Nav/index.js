@@ -8,7 +8,10 @@ class Nav extends Component {
       <header>
         <nav id="navBG" class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
+            <a href="/">
+              <img src="https://i.imgur.com/DtzwcGB.png" style={{marginLeft: '20px', height: '82px', width: '144px'}} />
+            </a>
+            <a class="navbar-item" href="/">
               <h2>Deck of Legends</h2>
             </a>
 
@@ -29,7 +32,7 @@ class Nav extends Component {
             <div class="navbar-start">
               <a class="navbar-item">Home</a>
 
-              <a class="navbar-item">My Teams</a>
+              <a class="navbar-item">My Deck</a>
 
               <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">Learn More</a>
@@ -45,7 +48,7 @@ class Nav extends Component {
             <div class="navbar-end">
               <div class="navbar-item">
                 <div class="buttons">
-                  <a class="button is-primary">
+                  <a class="button is-light">
                     <strong>Sign up</strong>
                   </a>
                   <a class="button is-light">Log in</a>
