@@ -1,0 +1,42 @@
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+
+}
+
+.frontAndBack {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+.imgColumn,
+.detailsColumn {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 20px;
+}
+
+.imgColumn {
+  width: 25%;
+}
+
+img {
+  height: 350px;
+  width: 250px;
+}
+
+.detailsColumn {
+  width: 60%;
+}
+
+.cardInfoContainer {
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+.cardStatsContainer {
+  border: 1px solid black;
+}

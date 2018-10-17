@@ -6,7 +6,7 @@ class Nav extends Component {
   render() {
     return (
       <header>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav id="navBG" class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
               <h2>Deck of Legends</h2>
