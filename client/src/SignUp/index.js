@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 
+// Construct password confirmation
 class SignUp extends Component {
   constructor() {
     super();
     this.state = {
       email: '',
-      password: '',
+      password: '',    
     };
 
     this.onChange = this.onChange.bind(this);
@@ -56,6 +57,7 @@ class SignUp extends Component {
                       <input
                         className="input is-large"                   
                         name="email"
+                        type="email"
                         placeholder="Enter Email"
                         value={this.state.email}
                         onChange={this.onChange}
@@ -67,6 +69,7 @@ class SignUp extends Component {
                       <input
                         className="input is-large"                                          
                         name="password"
+                        type="password"
                         placeholder="Enter Password"
                         value={this.state.password}
                         onChange={this.onChange}                        
