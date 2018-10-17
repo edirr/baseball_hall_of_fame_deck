@@ -11,7 +11,7 @@ import './App.css';
 import 'bulma';
 
 import Nav from './Nav';
-import LoginForm from './LoginForm';
+
 import SignUp from './SignUp'
 
 class App extends Component {
@@ -20,6 +20,7 @@ class App extends Component {
       <BrowserRouter>
       <div className="app">
         <Nav />
+        <SignUp />
       <div className="pageContent">
         <Switch>
         <Route exact path="/" component={CardList}/>
