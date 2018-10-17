@@ -7,10 +7,9 @@ const AboutPage = props => {
     <h1>About Page</h1>
     <p>This is some info about the Baseball Hall of Fame...
     blah blah blah blah blah blah blah blah blah blah blah blah </p>
-
-
     </div>
   );
 };
+
 
 export default AboutPage;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import CardImg from "../CardImg";
 import "./style.css";
 
-const CardList = props => {
+const MyDeck = props => {
   return (
     <div className="card-list">
       <Link to="/view/card"><CardImg className="card-img" /></Link>
@@ -20,4 +20,4 @@ const CardList = props => {
   );
 };
 
-export default CardList;
+export default MyDeck;
