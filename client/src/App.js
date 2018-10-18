@@ -11,8 +11,9 @@ import './App.css';
 import 'bulma';
 
 import Nav from './Nav';
-import LoginForm from './LoginForm';
 import SignUp from './SignUp'
+
+import RulesOfInduction from './RulesOfInduction';
 
 class App extends Component {
   render() {
@@ -23,7 +24,7 @@ class App extends Component {
       <div className="pageContent">
         <Switch>
         <Route exact path="/" component={CardList}/>
-        <Route exact path="/about" component={AboutPage}/>
+        <Route exact path="/about" component={RulesOfInduction}/>
         <Route exact path="/login" component={LoginForm}/>
         <Route exact path="/view/card" component={SingleCard}/>
 
