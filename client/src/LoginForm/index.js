@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import './style.css';
 
 class LoginForm extends Component {
   constructor() {
@@ -39,7 +41,7 @@ class LoginForm extends Component {
               <p className="subtitle has-text-grey">
                 Please log in to proceed.
               </p>
-              <div className="box">
+              <div className="box email-container">
                 <form onSubmit={this.onSubmit}>
                   <div className="field">
                     <div className="control">

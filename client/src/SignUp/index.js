@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classnames from 'classnames';
 
 // Construct password confirmation
@@ -35,7 +36,7 @@ class SignUp extends Component {
       .then(res => console.log(res.data))
       .catch(err => this.setState({ errors: err.response.data }))
     }
-  
+
 
   render() {
     const { errors } = this.state;
@@ -79,7 +80,7 @@ class SignUp extends Component {
                         type="password"
                         placeholder="Enter Password"
                         value={this.state.password}
-                        onChange={this.onChange}                        
+                        onChange={this.onChange}
                       />
                       {errors.password && (<div className="help is-danger">{errors.password}</div>)}
                     </div>
