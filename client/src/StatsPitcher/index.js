@@ -6,43 +6,38 @@ class StatsPitcher extends Component {
     return (
       <div className="pitchContainer">
         <h1><strong>Pitchers</strong></h1>
-        <table class="table">
+        <table className="table">
           <thead>
             <tr>
+              <th></th>
+              <th></th>
               <th>
-                <strong>Career</strong>
+                <abbr>GAMES</abbr>
               </th>
               <th>
-                <strong>Totals</strong>
+                <abbr>IP</abbr>
               </th>
               <th>
-                <abbr title="Games">Games</abbr>
+                <abbr>W</abbr>
               </th>
               <th>
-                <abbr title="InningsPitched">IP</abbr>
+                <abbr>L</abbr>
               </th>
               <th>
-                <abbr title="Won">W</abbr>
+                <abbr>S</abbr>
               </th>
               <th>
-                <abbr title="Lost">L</abbr>
+                <abbr>SO</abbr>
               </th>
               <th>
-                <abbr title="Saves">S</abbr>
-              </th>
-              <th>
-                <abbr title="StrikeOuts">SO</abbr>
-              </th>
-              <th>
-                <abbr title="ERA">ERA</abbr>
+                <abbr>ERA</abbr>
               </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th>
-              </th>
               <td>
+              <strong>Career</strong> <strong>Totals:</strong>
               </td>
               <td>{}</td>
               <td>{}</td>
