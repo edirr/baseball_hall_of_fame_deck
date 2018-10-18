@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -18,10 +19,14 @@ import SignUp from "./SignUp";
 
 library.add(faHome, faEnvelopeSquare, faSignInAlt );
 
+
+
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
       <BrowserRouter>
+
         <div className="app">
           <Nav />
 
@@ -38,7 +43,10 @@ class App extends Component {
             </Switch>
           </div>
         </div>
+
+
       </BrowserRouter>
+      </Provider>
     );
   }
 }

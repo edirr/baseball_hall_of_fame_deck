@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
+
 import axios from 'axios';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
+import PropTypes from 'prop-types'
+import { withRouter } from 'react-router-dom'
+
 import classnames from 'classnames';
+import { connect } from 'react-redux';
+import { registerUser } from '../actions/authActions'
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Construct password confirmation
 class SignUp extends Component {
@@ -18,6 +27,12 @@ class SignUp extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.errors) {
+      this.setState({errors: nextProps.errors})
+    }
+  }
+
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
@@ -31,6 +46,7 @@ class SignUp extends Component {
       password2: this.state.password2
     };
 
+
     axios
       .post('/api/users/register', newUser)
       .then(res => console.log(res.data))
@@ -38,12 +54,17 @@ class SignUp extends Component {
     }
 
 
+    this.props.registerUser(newUser, this.props.history)
+  }
+  
+
+
   render() {
-    const { errors } = this.state;
+    const { errors } = this.state;    
 
     return (
-      <section className="hero is-fullheight">
-        <div className="hero-body">
+      <section className="hero is-fullheight">        
+        <div className="hero-body">        
           <div className="container has-text-centered">
             <div className="column is-4 is-offset-4">
               <h3 className="title has-text-grey">Sign Up</h3>
@@ -115,4 +136,15 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+SignUp.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+}
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+  errors: state.errors
+});
+
+export default connect(mapStateToProps, { registerUser })(withRouter(SignUp));

@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import classnames from 'classnames';
+import { loginUser } from '../actions/authActions'
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './style.css';
 
@@ -7,11 +13,23 @@ class LoginForm extends Component {
     super();
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      errors: {},      
     };
 
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.auth.isAuthenticated) {
+      this.props.history.push('/')
+    }
+
+
+    if(nextProps.errors) {
+      this.setState({errors: nextProps.errors})
+    }
   }
 
   // If you write onChange type functions with arrow
@@ -19,19 +37,21 @@ class LoginForm extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const user = {
+    const userData = {
       email: this.state.email,
-      password: this.state.password,
+      password: this.state.password
     };
 
-    console.log(user)
+    this.props.loginUser(userData)
   }
 
   onChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   render() {
+    const { errors } = this.state;
+
     return (
       <section className="hero is-fullheight">
         <div className="hero-body">
@@ -46,26 +66,32 @@ class LoginForm extends Component {
                   <div className="field">
                     <div className="control">
                       <input
-                        className="input is-large"
+                        className={classnames('input is-large', {
+                          'is-danger': errors.email
+                        })}
                         type="email"
                         placeholder="Your Email"
                         name="email"
                         value={this.state.email}
                         onChange={this.onChange}
                       />
+                      {errors.email && (<div className="help is-danger">{errors.email}</div>)}
                     </div>
                   </div>
 
                   <div className="field disabled">
                     <div className="control">
                       <input
-                        className="input is-large disabled"
+                        className={classnames('input is-large', {
+                          'is-danger': errors.password
+                        })}
                         type="password"
                         placeholder="Your Password"
                         name="password"
                         value={this.state.password}
                         onChange={this.onChange}
                       />
+                      {errors.password && (<div className="help is-danger">{errors.password}</div>)}
                     </div>
                   </div>
 
@@ -89,4 +115,15 @@ class LoginForm extends Component {
   }
 }
 
-export default LoginForm;
+LoginForm.propTypes = {
+  loginUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+}
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+  errors: state.errors
+})
+
+export default connect(mapStateToProps, { loginUser })(LoginForm);
