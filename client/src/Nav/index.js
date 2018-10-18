@@ -40,9 +40,11 @@ class Nav extends Component {
               <div className="navbar-item has-dropdown is-hoverable">
                 <a className="navbar-link">Learn More</a>
 
-                <div className="navbar-dropdown">
-                  <Link to="/about" className="navbar-item">About the Hall</Link>
-                  <Link to="/rules" className="navbar-item">Rules of Induction</Link>
+
+                <div class="navbar-dropdown">
+                  <Link to="/about" class="navbar-item">About the Hall</Link>
+                  <Link to="/rules" class="navbar-item">Rules of Induction</Link>
+
                 </div>
               </div>
             </div>

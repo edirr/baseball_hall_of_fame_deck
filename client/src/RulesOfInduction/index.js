@@ -5,7 +5,7 @@ import "./style.css";
 const RulesOfInduction = props => {
   return (
     <div className="body">
-      <div className="hero-image">
+      <div className="hero-rules">
         <div className="articleTitle">
           <h1>BBWAA Rules Of Induction</h1>
         </div>

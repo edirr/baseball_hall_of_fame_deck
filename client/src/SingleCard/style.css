@@ -14,7 +14,6 @@
 
 .imgColumn,
 .detailsColumn {
-  border: 1px solid black;
   padding: 10px;
   margin: 20px;
 }
@@ -33,10 +32,12 @@ img {
 }
 
 .cardInfoContainer {
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 30px;
   margin-bottom: 20px;
 }
 
 .cardStatsContainer {
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 30px;
 }

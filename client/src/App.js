@@ -1,6 +1,5 @@
-
 import React, { Component } from "react";
-import logo from "./logo.svg";
+
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -27,24 +26,22 @@ class App extends Component {
       <Provider store={store}>
       <BrowserRouter>
 
-        <div className="app">
-          <Nav />
+      <div className="app">
+        <Nav />
+      <div className="pageContent">
+        <Switch>
+        <Route exact path="/" component={HomePage}/>
+        <Route exact path="/about" component={ AboutPage }/>
+        <Route exact path="/login" component={LoginForm}/>
+        <Route exact path="/register" component={SignUp}/>
+        <Route exact path="/rules" component={RulesOfInduction}/>
+        <Route exact path="/view/card" component={SingleCard}/>
+        <Route exact path="/mydeck" component={MyDeck}/>
+        <Route component={NotFound}/>
 
-          <div className="pageContent">
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route exact path="/about" component={AboutPage} />
-              <Route exact path="/login" component={LoginForm} />
-              <Route exact path="/register" component={SignUp} />
-              <Route exact path="/rules" component={RulesOfInduction} />
-              <Route exact path="/view/card" component={SingleCard} />
-              <Route exact path="/mydeck" component={MyDeck} />
-              <Route component={NotFound} />
-            </Switch>
-          </div>
-        </div>
-
-
+        </Switch>
+      </div>
+      </div>
       </BrowserRouter>
       </Provider>
     );

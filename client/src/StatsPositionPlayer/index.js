@@ -46,43 +46,38 @@ componentDidMount(){
     return (
       <div className="posContainer">
         <h1><strong>Position Players</strong></h1>
-        <table class="table">
+        <table className="table is-hoverable">
           <thead>
             <tr>
+              <th></th>
+              <th></th>
               <th>
-                <strong>Career</strong>
+                <abbr>AVG</abbr>
               </th>
               <th>
-                <strong>Totals</strong>
+                <abbr>G</abbr>
               </th>
               <th>
-                <abbr title="avg">avg</abbr>
+                <abbr>R</abbr>
               </th>
               <th>
-                <abbr title="Games">G</abbr>
+                <abbr>H</abbr>
               </th>
               <th>
-                <abbr title="Runs">R</abbr>
+                <abbr>HR</abbr>
               </th>
               <th>
-                <abbr title="Hits">H</abbr>
+                <abbr>RBI</abbr>
               </th>
               <th>
-                <abbr title="HomeRuns">HR</abbr>
-              </th>
-              <th>
-                <abbr title="RBI">RBI</abbr>
-              </th>
-              <th>
-                <abbr title="StolenBases">SB</abbr>
+                <abbr>SB</abbr>
               </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th>
-              </th>
               <td>
+              <strong>Career</strong> <strong>Totals:</strong>
               </td>
               <td>{stats.avg}</td>
               <td>{stats.g}</td>
