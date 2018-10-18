@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+
+import axios from 'axios';
+
+
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
+
 import classnames from 'classnames';
 import { connect } from 'react-redux';
 import { registerUser } from '../actions/authActions'
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Construct password confirmation
 class SignUp extends Component {
@@ -39,9 +46,18 @@ class SignUp extends Component {
       password2: this.state.password2
     };
 
+
+    axios
+      .post('/api/users/register', newUser)
+      .then(res => console.log(res.data))
+      .catch(err => this.setState({ errors: err.response.data }))
+    }
+
+
     this.props.registerUser(newUser, this.props.history)
   }
   
+
 
   render() {
     const { errors } = this.state;    
@@ -85,7 +101,7 @@ class SignUp extends Component {
                         type="password"
                         placeholder="Enter Password"
                         value={this.state.password}
-                        onChange={this.onChange}                        
+                        onChange={this.onChange}
                       />
                       {errors.password && (<div className="help is-danger">{errors.password}</div>)}
                     </div>

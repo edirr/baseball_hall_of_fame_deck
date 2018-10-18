@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
 import { loginUser } from '../actions/authActions'
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import './style.css';
 
 class LoginForm extends Component {
   constructor() {
@@ -57,7 +61,7 @@ class LoginForm extends Component {
               <p className="subtitle has-text-grey">
                 Please log in to proceed.
               </p>
-              <div className="box">
+              <div className="box email-container">
                 <form onSubmit={this.onSubmit}>
                   <div className="field">
                     <div className="control">
