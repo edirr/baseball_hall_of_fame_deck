@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Provider } from 'react-redux';
+import store from './store';
+
 import HomePage from './HomePage';
 import MyDeck from './MyDeck'
 import AboutPage from './AboutPage';
 import LoginForm from './LoginForm'
 import SingleCard from './SingleCard'
 import NotFound from './NotFound';
+import Nav from './Nav';
+import SignUp from './SignUp';
+
 import './App.css';
 import 'bulma';
 
-import Nav from './Nav';
-
-import SignUp from './SignUp';
 
 
 
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
       <BrowserRouter>
       <div className="app">
-        <Nav />   
-        <SignUp />     
+        <Nav />        
       <div className="pageContent">
         <Switch>
         <Route exact path="/" component={HomePage}/>
@@ -38,6 +40,7 @@ class App extends Component {
       </div>
       </div>
       </BrowserRouter>
+      </Provider>
     );
   }
 
