@@ -7,6 +7,7 @@ import AboutPage from './AboutPage';
 import LoginForm from './LoginForm'
 import SingleCard from './SingleCard'
 import NotFound from './NotFound';
+import RulesOfInduction from './RulesOfInduction';
 import './App.css';
 import 'bulma';
 
@@ -21,15 +22,14 @@ class App extends Component {
     return (
       <BrowserRouter>
       <div className="app">
-        <Nav />   
-        <SignUp />     
+        <Nav />
       <div className="pageContent">
         <Switch>
         <Route exact path="/" component={HomePage}/>
         <Route exact path="/about" component={ AboutPage }/>
         <Route exact path="/login" component={LoginForm}/>
         <Route exact path="/register" component={SignUp}/>
-        <Route exact path="/rules" />
+        <Route exact path="/rules" component={RulesOfInduction}/>
         <Route exact path="/view/card" component={SingleCard}/>
         <Route exact path="/mydeck" component={MyDeck}/>
         <Route component={NotFound}/>

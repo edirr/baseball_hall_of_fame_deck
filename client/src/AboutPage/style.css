@@ -1,6 +1,6 @@
 
 
-.hero-image {
+.hero-about {
   background-image: url(https://i.imgur.com/VjGRuBl.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -12,7 +12,7 @@
   padding-bottom: 20%;
 }
 
-.articleTitle {
+.article-title {
   display: flex;
   justify-content: center;
   align-items: center;

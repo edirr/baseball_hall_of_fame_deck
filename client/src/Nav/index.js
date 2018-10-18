@@ -41,8 +41,7 @@ class Nav extends Component {
 
                 <div class="navbar-dropdown">
                   <Link to="/about" class="navbar-item">About the Hall</Link>
-                  <a class="navbar-item">Teams</a>
-                  <a class="navbar-item">Rules of Induction</a>
+                  <Link to="/rules" class="navbar-item">Rules of Induction</Link>
                 </div>
               </div>
             </div>
