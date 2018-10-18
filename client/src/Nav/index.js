@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom"
 import "bulma";
 import "./style.css";
 
@@ -8,12 +9,12 @@ class Nav extends Component {
       <header>
         <nav id="navBG" class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
-            <a href="/">
+            <Link to="/">
               <img src="https://i.imgur.com/DtzwcGB.png" style={{marginLeft: '20px', height: '82px', width: '144px'}} />
-            </a>
-            <a class="navbar-item" href="/">
+            </Link>
+            <span class="navbar-item">
               <h2>Deck of Legends</h2>
-            </a>
+            </span>
 
             <a
               role="button"
@@ -30,15 +31,16 @@ class Nav extends Component {
 
           <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-              <a class="navbar-item" href="/">Home</a>
 
-              <a class="navbar-item">My Deck</a>
+              <Link to="/" class="navbar-item">Home</Link>
+
+              <Link to="/mydeck" class="navbar-item">My Deck</Link>
 
               <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">Learn More</a>
 
                 <div class="navbar-dropdown">
-                  <a class="navbar-item" href="/about">About the Hall</a>
+                  <Link to="/about" class="navbar-item">About the Hall</Link>
                   <a class="navbar-item">Teams</a>
                   <a class="navbar-item">Rules of Induction</a>
                 </div>
@@ -48,10 +50,10 @@ class Nav extends Component {
             <div class="navbar-end">
               <div class="navbar-item">
                 <div class="buttons">
-                  <a class="button is-light">
-                    <strong>Sign up</strong>
-                  </a>
-                  <a class="button is-light">Log in</a>
+                  <Link to="/register" class="button is-light">
+                    Sign up
+                  </Link>
+                  <Link to="/login" class="button is-light">Log in</Link>
                 </div>
               </div>
             </div>

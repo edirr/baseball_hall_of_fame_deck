@@ -4,6 +4,7 @@ import "./style.css";
 
 const AboutPage = props => {
   return (
+
     <div className="body">
       <div className="hero-image">
         <div className="articleTitle">
@@ -11,8 +12,10 @@ const AboutPage = props => {
         </div>
       </div>
       <AboutTheHallText />
+
     </div>
   );
 };
+
 
 export default AboutPage;
