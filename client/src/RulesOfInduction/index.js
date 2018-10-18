@@ -1,18 +1,18 @@
 import React, { Component } from "react";
-import AboutTheHallText from "../AboutTheHallText";
+import RulesOfInductionText from "../RulesOfInductionText";
 import "./style.css";
 
-const AboutPage = props => {
+const RulesOfInduction = props => {
   return (
     <div className="body">
       <div className="hero-image">
         <div className="articleTitle">
-          <h1>The History of the Hall of Fame</h1>
+          <h1>BBWAA Rules Of Induction</h1>
         </div>
       </div>
-      <AboutTheHallText />
+      <RulesOfInductionText />
     </div>
   );
 };
 
-export default AboutPage;
+export default RulesOfInduction;

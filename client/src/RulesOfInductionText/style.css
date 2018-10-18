@@ -1,0 +1,30 @@
+.text {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 500;
+}
+
+.container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.credit {
+  font-style: italic;
+  padding-left: 40px;
+  padding-bottom: 50px;
+}
+
+.image-left {
+  height: 500px;
+  width: 600px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.image-right {
+  height: 500px;
+  width: 600px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+}

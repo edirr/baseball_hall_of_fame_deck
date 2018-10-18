@@ -30,7 +30,7 @@ class Nav extends Component {
 
           <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-              <a class="navbar-item">Home</a>
+              <a class="navbar-item" href="/">Home</a>
 
               <a class="navbar-item">My Deck</a>
 
@@ -38,7 +38,7 @@ class Nav extends Component {
                 <a class="navbar-link">Learn More</a>
 
                 <div class="navbar-dropdown">
-                  <a class="navbar-item">About the Hall</a>
+                  <a class="navbar-item" href="/about">About the Hall</a>
                   <a class="navbar-item">Teams</a>
                   <a class="navbar-item">Rules of Induction</a>
                 </div>
