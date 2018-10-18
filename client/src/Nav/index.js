@@ -31,6 +31,7 @@ class Nav extends Component {
 
           <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
+
               <Link to="/" class="navbar-item">Home</Link>
 
               <Link to="/mydeck" class="navbar-item">My Deck</Link>

@@ -11,14 +11,17 @@ import './App.css';
 import 'bulma';
 
 import Nav from './Nav';
+
 import SignUp from './SignUp';
+
+
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
       <div className="app">
-        <Nav />
+        <Nav />        
       <div className="pageContent">
         <Switch>
         <Route exact path="/" component={HomePage}/>
