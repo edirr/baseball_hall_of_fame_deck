@@ -13,6 +13,7 @@ module.exports = {
   ],
 
   players: [
+
     ['Honus Wagner', 1936, 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/HonusWagnerCard.jpg/220px-HonusWagnerCard.jpg'],
     ['Babe Ruth', 1936, 'http://www.vintagecardprices.com/pics/1794/163967.jpg'],
     ['Christy Mathewson', 1936, 'https://images-na.ssl-images-amazon.com/images/I/51h3iZ1wSgL._SY445_.jpg'],

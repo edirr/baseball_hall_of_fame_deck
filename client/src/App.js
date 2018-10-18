@@ -1,26 +1,31 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import HomePage from './HomePage';
-import MyDeck from './MyDeck'
-import AboutPage from './AboutPage';
-import LoginForm from './LoginForm'
-import SingleCard from './SingleCard'
-import NotFound from './NotFound';
-import RulesOfInduction from './RulesOfInduction';
-import './App.css';
-import 'bulma';
+import React, { Component } from "react";
 
-import Nav from './Nav';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faEnvelopeSquare, faSignInAlt } from "@fortawesome/free-solid-svg-icons";
+import HomePage from "./HomePage";
+import MyDeck from "./MyDeck";
+import AboutPage from "./AboutPage";
+import LoginForm from "./LoginForm";
+import SingleCard from "./SingleCard";
+import RulesOfInduction from "./RulesOfInduction";
+import NotFound from "./NotFound";
+import "./App.css";
+import "bulma";
+import Nav from "./Nav";
+import SignUp from "./SignUp";
 
-import SignUp from './SignUp';
+library.add(faHome, faEnvelopeSquare, faSignInAlt );
 
 
 
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
       <BrowserRouter>
+
       <div className="app">
         <Nav />
       <div className="pageContent">
@@ -38,9 +43,9 @@ class App extends Component {
       </div>
       </div>
       </BrowserRouter>
+      </Provider>
     );
   }
-
 }
 
 export default App;
