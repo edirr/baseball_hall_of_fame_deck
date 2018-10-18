@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import classnames from 'classnames';
 
 // Construct password confirmation
 class SignUp extends Component {
@@ -8,7 +9,8 @@ class SignUp extends Component {
     this.state = {
       email: '',
       password: '',
-      password2: ''
+      password2: '',
+      errors: {},
     };
 
     this.onChange = this.onChange.bind(this);
@@ -31,8 +33,9 @@ class SignUp extends Component {
     axios
       .post('/api/users/register', newUser)
       .then(res => console.log(res.data))
-      .catch(err => console.log(err.response.data));
-  }
+      .catch(err => this.setState({ errors: err.response.data }))
+    }
+  
 
   render() {
     const { errors } = this.state;
@@ -54,37 +57,46 @@ class SignUp extends Component {
                   <div className="field">
                     <div className="control">
                       <input
-                        className="input is-large"
+                        className={classnames('input is-large', {
+                          'is-danger': errors.email
+                        })}
                         name="email"
                         type="email"
                         placeholder="Enter Email"
                         value={this.state.email}
                         onChange={this.onChange}
                       />
+                      {errors.email && (<div className="help is-danger">{errors.email}</div>)}
                     </div>
                   </div>
                   <div className="field">
                     <div className="control">
                       <input
-                        className="input is-large"
+                        className={classnames('input is-large', {
+                          'is-danger': errors.password
+                        })}
                         name="password"
                         type="password"
                         placeholder="Enter Password"
                         value={this.state.password}
-                        onChange={this.onChange}
+                        onChange={this.onChange}                        
                       />
+                      {errors.password && (<div className="help is-danger">{errors.password}</div>)}
                     </div>
                   </div>
                   <div className="field">
                     <div className="control">
                       <input
-                        className="input is-large"
+                        className={classnames('input is-large', {
+                          'is-danger': errors.password2
+                        })}
                         name="password2"
                         type="password"
                         placeholder="Confirm Password"
                         value={this.state.password2}
                         onChange={this.onChange}
                       />
+                      {errors.password2 && (<div className="help is-danger">{errors.password2}</div>)}
                     </div>
                   </div>
                   <input
