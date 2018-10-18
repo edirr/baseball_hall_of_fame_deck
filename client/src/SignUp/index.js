@@ -7,7 +7,8 @@ class SignUp extends Component {
     super();
     this.state = {
       email: '',
-      password: '',    
+      password: '',
+      password2: ''
     };
 
     this.onChange = this.onChange.bind(this);
@@ -15,7 +16,7 @@ class SignUp extends Component {
   }
 
   onChange(e) {
-    this.setState({ [e.target.name ]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   onSubmit(e) {
@@ -24,14 +25,15 @@ class SignUp extends Component {
     const newUser = {
       email: this.state.email,
       password: this.state.password,
+      password2: this.state.password2
     };
 
     axios
       .post('/api/users/register', newUser)
       .then(res => console.log(res.data))
-      .catch(err => console.log(err.response.data))
-    }
-  
+      .catch(err => console.log(err.response.data));
+  }
+
   render() {
     const { errors } = this.state;
 
@@ -52,7 +54,7 @@ class SignUp extends Component {
                   <div className="field">
                     <div className="control">
                       <input
-                        className="input is-large"                   
+                        className="input is-large"
                         name="email"
                         type="email"
                         placeholder="Enter Email"
@@ -64,15 +66,27 @@ class SignUp extends Component {
                   <div className="field">
                     <div className="control">
                       <input
-                        className="input is-large"                                          
+                        className="input is-large"
                         name="password"
                         type="password"
                         placeholder="Enter Password"
                         value={this.state.password}
-                        onChange={this.onChange}                        
+                        onChange={this.onChange}
                       />
                     </div>
-                  </div>                
+                  </div>
+                  <div className="field">
+                    <div className="control">
+                      <input
+                        className="input is-large"
+                        name="password2"
+                        type="password"
+                        placeholder="Confirm Password"
+                        value={this.state.password2}
+                        onChange={this.onChange}
+                      />
+                    </div>
+                  </div>
                   <input
                     type="submit"
                     value="Sign Up"
@@ -87,6 +101,5 @@ class SignUp extends Component {
     );
   }
 }
-
 
 export default SignUp;
