@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 class FilterSearch extends React.Component {
@@ -33,9 +34,12 @@ updateSearch(event){
             <strong>Search</strong>
           </button>
         </div>
-        <h1 className='filtered-names'>{filteredCards.map((card)=>{
-          return <div>{card.name}</div>
-        })}</h1>
+        <div className='card-list filtered-names'>{filteredCards.map((card)=>{
+          return(
+      <Link to="/view/card"><img id="player-img" className="card-img" src={card.img} /><p className="player-name">{card.name}</p></Link>
+          )
+
+        })}</div>
         <hr className="line" />
       </div>
     );

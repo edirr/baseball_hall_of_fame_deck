@@ -31,14 +31,17 @@ let cards= [
 {
   id: 1,
 name: "Eric",
+img: 'https://sep.yimg.com/ay/autographsforsale/jim-thome-1999-upper-deck-all-star-game-jumbo-card-29.jpg'
 },
 {
   id:2,
   name:"Misha",
+  img: 'https://cdn.sportsmemorabilia.com/sports-product-image/3-t7710628-340.jpg'
 },
 {
   id:3,
   name:"Daniel",
+  img:'https://78.media.tumblr.com/5fc2ce74f233c72d040c76db9d943954/tumblr_p2xvsscybt1vyppq9o1_500.png'
 },
 
 ]
@@ -76,10 +79,11 @@ class App extends Component {
 
       <div className="app">
         <Nav />
-        <FilterSearch cards={cards} />
       <div className="pageContent">
         <Switch>
-        <Route exact path="/" component={HomePage}/>
+        <Route exact path="/" render={ (props) =>
+          <FilterSearch cards={cards}/>
+         }/>
         <Route exact path="/about" component={ AboutPage }/>
         <Route exact path="/login" component={LoginForm}/>
         <Route exact path="/register" component={SignUp}/>

@@ -1,3 +1,25 @@
 .filtered-names{
   color:black;
 }
+
+.card-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#player-img {
+  max-width: 300px;
+  max-height:300px;
+  width: auto;
+  height: auto;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.player-name{
+  text-align: center;
+  color: black;
+}
