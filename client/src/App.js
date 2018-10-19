@@ -8,7 +8,7 @@ import store from './store';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faEnvelopeSquare, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faEnvelopeSquare, faSignInAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import HomePage from './HomePage';
 import MyDeck from './MyDeck';
@@ -23,7 +23,7 @@ import SignUp from './SignUp';
 import './App.css';
 import 'bulma';
 
-library.add(faHome, faEnvelopeSquare, faSignInAlt );
+library.add(faHome, faEnvelopeSquare, faSignInAlt, faUser );
 
 if(localStorage.jwtToken) {
   // Set auth token header auth

@@ -43,17 +43,16 @@ class Nav extends Component {
 
     const guestLinks = (
       <div className="navbar-end">
-        <div className="navbar-item">
-          <div className="buttons">
-            <Link to="/register" className="button is-light">
-              Sign up
+                  
+            <Link to="/register" className="navbar-item is-light" style={{fontSize: "15px"}}>
+              <FontAwesomeIcon clasName="nav-icon" icon="user" />Sign up              
             </Link>
-            <Link to="/login" className="button is-light">
-              <FontAwesomeIcon icon="sign-in-alt" /> Log in
+            <Link to="/login" className="navbar-item is-light" style={{fontSize: "15px"}}>
+              <FontAwesomeIcon className="nav-icon" icon="sign-in-alt" /> Log in
             </Link>
-          </div>
+        
         </div>
-      </div>
+
     );
 
     return (
