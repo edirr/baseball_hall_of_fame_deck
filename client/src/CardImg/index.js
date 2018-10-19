@@ -1,6 +1,16 @@
 import React, { Component } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import axios from 'axios';
+
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router';
+
+import classnames from 'classnames';
+import { connect } from 'react-redux';
+import { getPlayer } from '../actions/playerActions'
+
 import "./style.css";
+
+
 
 const CardImg = (props) => {
 

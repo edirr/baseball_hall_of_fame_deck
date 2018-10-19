@@ -13,10 +13,11 @@ module.exports = {
   ],
 
   players: [
+  // Name, Year Inducted, Image URL, API ID
 
     ['Honus Wagner', 1936, 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/HonusWagnerCard.jpg/220px-HonusWagnerCard.jpg'],
     ['Babe Ruth', 1936, 'http://www.vintagecardprices.com/pics/1794/163967.jpg'],
-    ['Christy Mathewson', 1936, 'https://images-na.ssl-images-amazon.com/images/I/51h3iZ1wSgL._SY445_.jpg'],
+    ['Christy Mathewson', 1936, 'https://images-na.ssl-images-amazon.com/images/I/51h3iZ1wSgL._SY445_.jpg', '118422'],
     ['Walter Johnson', 1936, 'https://images-na.ssl-images-amazon.com/images/I/3163TiOBYzL.jpg'],
     ['Ty Cobb', 1936, 'http://i.imgur.com/AoDGx.jpg'],
     ['Cy Young', 1937, 'https://images-na.ssl-images-amazon.com/images/I/51sC1YLNUmL._SY445_.jpg'],

@@ -12,9 +12,13 @@ const PlayerSchema = new Schema({
     allowNull: true,
   },
   imgUrl: {
-  	type: String
-  	// required: true
+  	type: String,
+  	required: true
   },
+
+  apiId: {
+    type: String    
+  }
 });
 
 module.exports = Player = mongoose.model('players', PlayerSchema)
