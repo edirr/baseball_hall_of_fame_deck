@@ -14,21 +14,27 @@ class LoginForm extends Component {
     this.state = {
       email: '',
       password: '',
-      errors: {},      
+      errors: {},
     };
 
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push('/');
+    }
+  }
+
   componentWillReceiveProps(nextProps) {
-    if(nextProps.auth.isAuthenticated) {
+    if (nextProps.auth.isAuthenticated) {
       this.props.history.push('/')
     }
 
 
-    if(nextProps.errors) {
-      this.setState({errors: nextProps.errors})
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors })
     }
   }
 
@@ -46,7 +52,8 @@ class LoginForm extends Component {
   }
 
   onChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({
+      [e.target.name]: e.target.value });
   }
 
   render() {

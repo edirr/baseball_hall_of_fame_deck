@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import jwt_decode from 'jwt-decode';
+import setAuthToken from './utils/setAuthToken'
+import { setCurrentUser } from './actions/authActions'
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -21,6 +24,15 @@ import './App.css';
 import 'bulma';
 
 library.add(faHome, faEnvelopeSquare, faSignInAlt );
+
+if(localStorage.jwtToken) {
+  // Set auth token header auth
+  setAuthToken(localStorage.jwtToken);
+  // Decode token and get user info and expiration
+  const decoded = jwt_decode(localStorage.jwtToken);
+  // Set user and isAuthenticated
+  store.dispatch(setCurrentUser(decoded))
+}
 
 
 
