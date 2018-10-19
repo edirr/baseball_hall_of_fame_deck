@@ -19,11 +19,29 @@ import RulesOfInduction from './RulesOfInduction';
 import NotFound from './NotFound';
 import Nav from './Nav';
 import SignUp from './SignUp';
+import FilterSearch from './FilterSearch'
 
 import './App.css';
 import 'bulma';
 
 library.add(faHome, faEnvelopeSquare, faSignInAlt, faUser );
+
+
+let cards= [
+{
+  id: 1,
+name: "Eric",
+},
+{
+  id:2,
+  name:"Misha",
+},
+{
+  id:3,
+  name:"Daniel",
+},
+
+]
 
 if(localStorage.jwtToken) {
   // Set auth token header auth
@@ -49,6 +67,7 @@ if(localStorage.jwtToken) {
 
 
 
+
 class App extends Component {
   render() {
     return (
@@ -57,6 +76,7 @@ class App extends Component {
 
       <div className="app">
         <Nav />
+        <FilterSearch cards={cards} />
       <div className="pageContent">
         <Switch>
         <Route exact path="/" component={HomePage}/>

@@ -67,7 +67,9 @@ class Nav extends Component {
             <Link to="/">
               <img
                 src="https://i.imgur.com/DtzwcGB.png"
+
                 style={{ marginLeft: '20px', height: '82px', width: '144px' }}
+
               />
             </Link>
             <span className="navbar-item">
@@ -90,9 +92,11 @@ class Nav extends Component {
           <div id="navbarBasicExample" className="navbar-menu">
             <div className="navbar-start">
               <Link to="/" className="navbar-item">
+
                 <FontAwesomeIcon icon="home" />
                 Home
               </Link>
+
 
               <div className="navbar-item has-dropdown is-hoverable">
                 <a className="navbar-link">Learn More</a>
@@ -106,6 +110,8 @@ class Nav extends Component {
                   </Link>
                 </div>
               </div>
+
+
             </div>
             {isAuthenticated ? authLinks : guestLinks}
           </div>
