@@ -45,51 +45,16 @@ componentDidMount(){
     console.log(stats)
     return (
       <div className="posContainer">
-        <h1><strong>Position Players</strong></h1>
-        <table className="table is-hoverable">
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th>
-                <abbr>AVG</abbr>
-              </th>
-              <th>
-                <abbr>G</abbr>
-              </th>
-              <th>
-                <abbr>R</abbr>
-              </th>
-              <th>
-                <abbr>H</abbr>
-              </th>
-              <th>
-                <abbr>HR</abbr>
-              </th>
-              <th>
-                <abbr>RBI</abbr>
-              </th>
-              <th>
-                <abbr>SB</abbr>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-              <strong>Career</strong> <strong>Totals:</strong>
-              </td>
-              <td>{stats.avg}</td>
-              <td>{stats.g}</td>
-              <td>{stats.r}</td>
-              <td>{stats.h}</td>
-              <td>{stats.hr}</td>
-              <td>{stats.rbi}</td>
-              <td>{stats.sb}</td>
-            </tr>
-          </tbody>
-        </table>
+        <h1><strong>Position Player Career Totals:</strong></h1>
+        <p><strong>AVG: </strong>{stats.avg}</p>
+        <p><strong>G: </strong>{stats.g}</p>
+        <p><strong>R: </strong>{stats.r}</p>
+        <p><strong>H: </strong>{stats.h}</p>
+        <p><strong>HR: </strong>{stats.hr}</p>
+        <p><strong>RBI: </strong>{stats.rbi}</p>
+        <p><strong>SB: </strong>{stats.sb}</p>
       </div>
+
     );
   }
 }

@@ -42,55 +42,20 @@ componentDidMount(){
      const { stats } = this.state;
     console.log(stats)
     return (
-      <div className="pitchContainer">
-        <h1><strong>Pitchers</strong></h1>
-        <table className="table">
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th>
-                <abbr>GAMES</abbr>
-              </th>
-              <th>
-                <abbr>IP</abbr>
-              </th>
-              <th>
-                <abbr>W</abbr>
-              </th>
-              <th>
-                <abbr>L</abbr>
-              </th>
-              <th>
-                <abbr>S</abbr>
-              </th>
-              <th>
-                <abbr>SO</abbr>
-              </th>
-              <th>
-                <abbr>ERA</abbr>
 
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-              <strong>Career</strong> <strong>Totals:</strong>
-              </td>
-              <td>{stats.g}</td>
-              <td>{stats.ip}</td>
-              <td>{stats.w}</td>
-              <td>{stats.l}</td>
-              <td>{stats.sv}</td>
-              <td>{stats.so}</td>
-              <td>{stats.era}</td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="pitchContainer">
+        <h1><strong>Pitcher Career Totals:</strong></h1>
+        <p><strong>GAMES: </strong>{stats.g}</p>
+        <p><strong>IP: </strong>{stats.ip}</p>
+        <p><strong>W: </strong>{stats.w}</p>
+        <p><strong>L: </strong>{stats.l}</p>
+        <p><strong>S: </strong>{stats.sv}</p>
+        <p><strong>SO: </strong>{stats.so}</p>
+        <p><strong>ERA: </strong>{stats.era}</p>
       </div>
     );
   }
 }
+
 
 export default StatsPitcher;

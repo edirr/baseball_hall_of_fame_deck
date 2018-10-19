@@ -28,16 +28,15 @@ img {
 }
 
 .detailsColumn {
-  width: 60%;
+  width: 40%;
+  border: 1px solid black;
 }
 
 .cardInfoContainer {
-  border: 2px solid black;
   border-radius: 30px;
   margin-bottom: 20px;
 }
 
 .cardStatsContainer {
-  border: 2px solid black;
   border-radius: 30px;
 }
