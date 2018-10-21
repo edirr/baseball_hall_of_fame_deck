@@ -13,7 +13,6 @@ module.exports = {
   ],
 
   players: [
-
     ['Honus Wagner', 1936, 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/HonusWagnerCard.jpg/220px-HonusWagnerCard.jpg'],
     ['Babe Ruth', 1936, 'http://www.vintagecardprices.com/pics/1794/163967.jpg'],
     ['Christy Mathewson', 1936, 'https://images-na.ssl-images-amazon.com/images/I/51h3iZ1wSgL._SY445_.jpg'],
@@ -295,7 +294,7 @@ module.exports = {
     ['Tony Gwynn', 2007, 'http://www.baseball-almanac.com/baseball_cards/samples/1997_Mothers_Cookies_Baseball_Card.jpg'],
     ['Dick Williams', 2008, 'https://cdn.sportsmemorabilia.com/sports-product-image/790-t2043800-340.jpg'],
     ['Billy Southworth', 2008, 'https://images-na.ssl-images-amazon.com/images/I/511yYO8x7KL._SY445_.jpg'],
-    ['Walter O\'Malley', 2008, 'http://4.bp.blogspot.com/_W2Ncx2XIww4/TF0-kPi8CzI/AAAAAAAAIIk/RYDaLjmnowI/s1600/sb_1978_topps_omalley.jpg'],
+    [`Walter O'Malley`, 2008, 'http://4.bp.blogspot.com/_W2Ncx2XIww4/TF0-kPi8CzI/AAAAAAAAIIk/RYDaLjmnowI/s1600/sb_1978_topps_omalley.jpg'],
     ['Bowie Kuhn', 2008, 'https://78.media.tumblr.com/8eb16c2618c3081ac9b3563c06861996/tumblr_p2iv0mHniS1vyppq9o5_500.png'],
     ['Rich Gossage', 2008, 'https://images-na.ssl-images-amazon.com/images/I/51S-N6RWsrL._SY445_.jpg'],
     ['Barney Dreyfuss', 2008, 'http://www.zeprock.com/Images/HOF/BDr1.jpg'],
@@ -312,7 +311,7 @@ module.exports = {
     ['Barry Larkin', 2012, 'https://cconnect.s3.amazonaws.com/wp-content/uploads/2012/07/1991-Topps-Barry-Larkin-730.jpg'],
     ['Deacon White', 2013, 'https://78.media.tumblr.com/5878561245ff068ff1e653c0b46594ed/tumblr_p2tjy8gAQQ1vyppq9o1_500.png'],
     ['Jacob Ruppert', 2013, 'https://78.media.tumblr.com/45c6b269da7522592a018088e9d28a46/tumblr_p2tjy8gAQQ1vyppq9o2_500.png'],
-    ['Hank O\'Day', 2013, 'https://78.media.tumblr.com/6c77037328317335b43ed041b3f7532a/tumblr_p2tjy8gAQQ1vyppq9o3_500.png'],
+    [`Hank O'Day`, 2013, 'https://78.media.tumblr.com/6c77037328317335b43ed041b3f7532a/tumblr_p2tjy8gAQQ1vyppq9o3_500.png'],
     ['Joe Torre', 2014, 'https://cconnect.s3.amazonaws.com/wp-content/uploads/2014/07/2000-Topps-Joe-Torre-214x300.jpg'],
     ['Frank Thomas', 2014, 'https://www.rksportspromotions.com/sites/default/files/2391-2579.jpg'],
     ['Greg Maddux', 2014, 'https://i.pinimg.com/originals/87/d8/4e/87d84e9323141820a6ef78bb385496e0.jpg'],
