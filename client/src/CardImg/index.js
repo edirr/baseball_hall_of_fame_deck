@@ -6,7 +6,7 @@ import { withRouter } from 'react-router';
 
 import classnames from 'classnames';
 import { connect } from 'react-redux';
-import { getPlayer } from '../actions/playerActions'
+
 
 import "./style.css";
 
