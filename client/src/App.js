@@ -20,6 +20,7 @@ import NotFound from './NotFound';
 import Nav from './Nav';
 import SignUp from './SignUp';
 import FilterSearch from './FilterSearch'
+import Dashboard from './Dashboard';
 
 import './App.css';
 import 'bulma';
@@ -84,6 +85,7 @@ class App extends Component {
         <Route exact path="/" render={ (props) =>
           <FilterSearch cards={cards}/>
          }/>
+        <Route exact path="/dashboard" component={ Dashboard }/>
         <Route exact path="/about" component={ AboutPage }/>
         <Route exact path="/login" component={LoginForm}/>
         <Route exact path="/register" component={SignUp}/>
