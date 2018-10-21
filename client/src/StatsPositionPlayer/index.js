@@ -46,15 +46,16 @@ componentDidMount(){
     return (
       <div className="posContainer">
         <h1><strong>Position Player Career Totals:</strong></h1>
-        <p><strong>AVG: </strong>{stats.avg}</p>
-        <p><strong>G: </strong>{stats.g}</p>
-        <p><strong>R: </strong>{stats.r}</p>
-        <p><strong>H: </strong>{stats.h}</p>
-        <p><strong>HR: </strong>{stats.hr}</p>
-        <p><strong>RBI: </strong>{stats.rbi}</p>
-        <p><strong>SB: </strong>{stats.sb}</p>
+        <div id="info">
+          <p><strong>AVG: </strong>{stats.avg}</p>
+          <p><strong>G: </strong>{stats.g}</p>
+          <p><strong>R: </strong>{stats.r}</p>
+          <p><strong>H: </strong>{stats.h}</p>
+          <p><strong>HR: </strong>{stats.hr}</p>
+          <p><strong>RBI: </strong>{stats.rbi}</p>
+          <p><strong>SB: </strong>{stats.sb}</p>
+        </div>
       </div>
-
     );
   }
 }

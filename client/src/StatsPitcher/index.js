@@ -45,13 +45,15 @@ componentDidMount(){
 
       <div className="pitchContainer">
         <h1><strong>Pitcher Career Totals:</strong></h1>
-        <p><strong>GAMES: </strong>{stats.g}</p>
-        <p><strong>IP: </strong>{stats.ip}</p>
-        <p><strong>W: </strong>{stats.w}</p>
-        <p><strong>L: </strong>{stats.l}</p>
-        <p><strong>S: </strong>{stats.sv}</p>
-        <p><strong>SO: </strong>{stats.so}</p>
-        <p><strong>ERA: </strong>{stats.era}</p>
+        <div id="info">
+          <p><strong>GAMES: </strong>{stats.g}</p>
+          <p><strong>IP: </strong>{stats.ip}</p>
+          <p><strong>W: </strong>{stats.w}</p>
+          <p><strong>L: </strong>{stats.l}</p>
+          <p><strong>S: </strong>{stats.sv}</p>
+          <p><strong>SO: </strong>{stats.so}</p>
+          <p><strong>ERA: </strong>{stats.era}</p>
+        </div>
       </div>
     );
   }
