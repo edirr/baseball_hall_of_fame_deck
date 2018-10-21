@@ -135,7 +135,7 @@ class Nav extends Component {
           <div id="navbarBasicExample" className="navbar-menu">
             <div className="navbar-start">
               <Link to="/" className="navbar-item">
-                <FontAwesomeIcon icon="home" />
+                <FontAwesomeIcon className="nav-icon" icon="home" />
                 Home
               </Link>
 
