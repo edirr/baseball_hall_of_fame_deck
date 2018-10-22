@@ -5,13 +5,19 @@ import { connect } from 'react-redux';
 import { getCurrentProfile } from '../actions/profileActions';
 
 class Dashboard extends Component {
+	  constructor(props) {
+    super(props);
+    };
+
 	componentDidMount() {
+
 		this.props.getCurrentProfile();
 	}
 
 	render() {
 		const {user} = this.props.auth;
-		const{profile, loading} = this.props.profile
+		const{profile, loading} = this.props.profile;
+		console.log(this.props.profile);
 
 		let dashboardContent;
 
@@ -23,6 +29,7 @@ class Dashboard extends Component {
 
 		return (
 			<h3>Dashboard</h3>
+
 
 			)
 	}

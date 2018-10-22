@@ -10,11 +10,17 @@ class SingleCard extends Component {
   }
 
   render() {
+    const self = this;
+    // console.log(self.props.cards[0].img)
+    // const id = this.props.cards.map((card)=>{
+    //   return card.id
+    // });
+    const {id} = self.props
     return (
       <div className="cardContainer">
         <div className="frontAndBack">
           <div className="imgColumn">
-            <img src="https://i.imgur.com/IaFEKkj.jpg" />
+            <img src={self.props.cards[0].img} />
             <h4 className="playerName">{/*img component*/}</h4>
           </div>
           <div className="detailsColumn">
