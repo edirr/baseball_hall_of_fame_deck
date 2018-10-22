@@ -46,7 +46,7 @@ class Nav extends Component {
         <Link
           to="/register"
           className="navbar-item is-light"
-          style={{ fontSize: "15px" }}
+          style={{ fontSize: "20px" }}
         >
           <FontAwesomeIcon clasName="nav-icon" icon="user" />
           Sign up
@@ -54,9 +54,10 @@ class Nav extends Component {
         <Link
           to="/login"
           className="navbar-item is-light"
-          style={{ fontSize: "15px" }}
+          style={{ fontSize: "20px" }}
         >
-          <FontAwesomeIcon className="nav-icon" icon="sign-in-alt" /> Log in
+          <FontAwesomeIcon className="nav-icon" icon="sign-in-alt" />
+          Log in
         </Link>
       </div>
     );

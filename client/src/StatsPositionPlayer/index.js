@@ -28,7 +28,7 @@ componentDidMount(){
       rbi: statData.rbi,
       sb: statData.sb,
     }
-    console.log(stats)
+    // console.log(stats)
     self.setState({
       stats:stats
     });
@@ -42,7 +42,7 @@ componentDidMount(){
 
   render() {
     const { stats } = this.state;
-    console.log(stats)
+    // console.log(stats)
     return (
       <div className="posContainer">
         <h1><strong>Position Player Career Totals:</strong></h1>
