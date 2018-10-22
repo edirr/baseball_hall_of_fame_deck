@@ -31,6 +31,7 @@ class Dashboard extends Component {
 			<h3>Dashboard</h3>
 
 
+
 			)
 	}
 }
@@ -47,5 +48,7 @@ const mapStateToProps = state => ({
 });
 
 
+
 export default connect(mapStateToProps, { getCurrentProfile })(Dashboard)
+
 

@@ -44,9 +44,10 @@ class PlayerInfo extends Component {
     const { info } = this.state;
     return (
       <div className="infoContainer">
-        <h1 style={{ paddingBottom: "20px" }}>
+        <h1>
           <strong className="name">{info.name}</strong>
         </h1>
+        <hr style={{ backgroundColor: 'lightGray' }} />
         <div id="info">
           <p>
             <strong>Weight: </strong>
@@ -74,6 +75,7 @@ class PlayerInfo extends Component {
             {info.debut_date}
           </p>
         </div>
+        <hr style={{ backgroundColor: 'lightGray' }} />
       </div>
     );
   }

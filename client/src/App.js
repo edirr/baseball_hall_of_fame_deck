@@ -21,6 +21,11 @@ import Nav from './Nav';
 import SignUp from './SignUp';
 import FilterSearch from './FilterSearch'
 import Dashboard from './Dashboard';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getCurrentProfile } from './actions/profileActions';
+
 
 import './App.css';
 import 'bulma';
@@ -97,12 +102,14 @@ if(localStorage.jwtToken) {
 
 
 class App extends Component {
+
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
     console.log(this.props);
+
     return (
       <Provider store={store}>
       <BrowserRouter>
