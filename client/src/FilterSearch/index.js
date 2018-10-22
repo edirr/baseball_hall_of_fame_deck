@@ -33,7 +33,7 @@ updateSearch(event){
         </div>
         <div className='card-list filtered-names'>{filteredCards.map((card)=>{
           return(
-      <Link to="/view/card"><img id="player-img" className="card-img" src={card.img} /><p className="player-name">{card.name}</p></Link>
+      <Link to="/view/card"><img id="player-img" className="card-img" id={card.id} src={card.img} /><p className="player-name"><strong>{card.name}</strong></p></Link>
           )
 
         })}</div>

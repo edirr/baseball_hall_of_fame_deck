@@ -46,7 +46,7 @@ class Nav extends Component {
         <Link
           to="/register"
           className="navbar-item is-light"
-          style={{ fontSize: "15px" }}
+          style={{ fontSize: "20px" }}
         >
           <FontAwesomeIcon clasName="nav-icon" icon="user" />
           Sign up
@@ -54,9 +54,10 @@ class Nav extends Component {
         <Link
           to="/login"
           className="navbar-item is-light"
-          style={{ fontSize: "15px" }}
+          style={{ fontSize: "20px" }}
         >
-          <FontAwesomeIcon className="nav-icon" icon="sign-in-alt" /> Log in
+          <FontAwesomeIcon className="nav-icon" icon="sign-in-alt" />
+          Log in
         </Link>
       </div>
     );
@@ -145,11 +146,11 @@ class Nav extends Component {
               <div className="navbar-item has-dropdown is-hoverable">
                 <a className="navbar-link">Learn More</a>
 
-                <div class="navbar-dropdown">
-                  <Link to="/about" class="navbar-item">
+                <div className="navbar-dropdown">
+                  <Link to="/about" className="navbar-item">
                     About the Hall
                   </Link>
-                  <Link to="/rules" class="navbar-item">
+                  <Link to="/rules" className="navbar-item">
                     Rules of Induction
                   </Link>
                 </div>
