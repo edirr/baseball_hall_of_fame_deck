@@ -5,26 +5,29 @@ import { connect } from 'react-redux';
 import { getCurrentProfile } from '../actions/profileActions';
 
 class Dashboard extends Component {
+	constructor() {
+		super();
+		this.state = {
+			name: '',
+			imgUrl: ''
+		};
+	}
 	componentDidMount() {
-		this.props.getCurrentProfile();
+		this.props.getCurrentProfile();		
 	}
 
+
+
 	render() {
-		const {user} = this.props.auth;
-		const{profile, loading} = this.props.profile
-
-		let dashboardContent;
-
-		if (profile === null || loading) {
-			dashboardContent = <h4>Loading...</h4>
-		} else {
-			dashboardContent = <h1>Hello!</h1>
-		}
-
+		const { user } = this.props.auth;
+		const { profile } = this.props.profile;
+		console.log(this.props)
 		return (
-			<h3>Dashboard</h3>
-
-			)
+			<div>
+				<h3>Dashboard</h3>
+				<p>{this.props[1]}</p>
+			</div>		
+		);
 	}
 }
 
@@ -32,11 +35,14 @@ Dashboard.propTypes = {
 	getCurrentProfile: PropTypes.func.isRequired,
 	auth: PropTypes.object.isRequired,
 	profile: PropTypes.object.isRequired
-}
+};
 
 const mapStateToProps = state => ({
 	profile: state.profile,
 	auth: state.auth
 });
 
-export default connect(mapStateToProps, { getCurrentProfile })(Dashboard)
+export default connect(
+	mapStateToProps,
+	{ getCurrentProfile }
+)(Dashboard);

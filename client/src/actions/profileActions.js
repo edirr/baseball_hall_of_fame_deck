@@ -2,13 +2,13 @@ import axios from 'axios';
 
 import {
 	GET_PROFILE,
-	PROFILE_LOADING,
+	// PROFILE_LOADING,
 	CLEAR_CURRENT_PROFILE,
 	GET_ERRORS
 } from './types';
 
 export const getCurrentProfile = () => dispatch => {
-	dispatch(setProfileLoading());
+	// dispatch(setProfileLoading());
 	axios
 		.get('/api/players/all')
 		.then(res =>
@@ -25,8 +25,8 @@ export const getCurrentProfile = () => dispatch => {
 		);
 };
 
-export const setProfileLoading = () => {
-	return {
-		type: PROFILE_LOADING
-	};
-};
+// export const setProfileLoading = () => {
+// 	return {
+// 		type: PROFILE_LOADING
+// 	};
+// };
