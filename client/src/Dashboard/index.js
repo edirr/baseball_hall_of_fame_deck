@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { getCurrentProfile } from '../actions/profileActions';
 
 class Dashboard extends Component {
+
 	constructor() {
 		super();
 		this.state = {
@@ -15,9 +16,7 @@ class Dashboard extends Component {
 	componentDidMount() {
 		this.props.getCurrentProfile();		
 	}
-
-
-
+  
 	render() {
 		const { user } = this.props.auth;
 		const { profile } = this.props.profile;
@@ -28,6 +27,11 @@ class Dashboard extends Component {
 				<p>{this.props[1]}</p>
 			</div>		
 		);
+
+			<h3>Dashboard</h3>
+
+
+			)
 	}
 }
 
@@ -42,7 +46,6 @@ const mapStateToProps = state => ({
 	auth: state.auth
 });
 
-export default connect(
-	mapStateToProps,
-	{ getCurrentProfile }
-)(Dashboard);
+
+export default connect(mapStateToProps, { getCurrentProfile })(Dashboard)
+

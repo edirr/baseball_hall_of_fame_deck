@@ -30,13 +30,10 @@ updateSearch(event){
         <h1 className="search-heading">Search for a Card</h1>
         <div className="control tile is-6 search-form ">
           <input value={this.state.search} onChange={this.updateSearch} className="input" type="text" placeholder="Search Players" />
-          <button id="submit-button" type="submit" className="button">
-            <strong>Search</strong>
-          </button>
         </div>
         <div className='card-list filtered-names'>{filteredCards.map((card)=>{
           return(
-      <Link to="/view/card"><img id="player-img" className="card-img" src={card.img} /><p className="player-name">{card.name}</p></Link>
+      <Link to="/view/card"><img id="player-img" className="card-img" id={card.id} src={card.img} /><p className="player-name"><strong>{card.name}</strong></p></Link>
           )
 
         })}</div>

@@ -66,7 +66,7 @@ class SignUp extends Component {
                 </figure>
                 <form onSubmit={this.onSubmit}>
                   <div className="field">
-                    <div className="control">
+                    <div className="control has-icons-left">
                       <input
                         className={classnames('input is-large', {
                           'is-danger': errors.email
@@ -80,10 +80,13 @@ class SignUp extends Component {
                       {errors.email && (
                         <div className="help is-danger">{errors.email}</div>
                       )}
+                      <span className="icon is-small is-left">
+                      <FontAwesomeIcon icon="envelope"/>
+                      </span>
                     </div>
                   </div>
                   <div className="field">
-                    <div className="control">
+                    <div className="control has-icons-left">
                       <input
                         className={classnames('input is-large', {
                           'is-danger': errors.password
@@ -97,10 +100,13 @@ class SignUp extends Component {
                       {errors.password && (
                         <div className="help is-danger">{errors.password}</div>
                       )}
+                      <span className="icon is-small is-left">
+                      <FontAwesomeIcon icon="unlock"/>
+                      </span>
                     </div>
                   </div>
                   <div className="field">
-                    <div className="control">
+                    <div className="control has-icons-left">
                       <input
                         className={classnames('input is-large', {
                           'is-danger': errors.password2
@@ -114,6 +120,9 @@ class SignUp extends Component {
                       {errors.password2 && (
                         <div className="help is-danger">{errors.password2}</div>
                       )}
+                      <span className="icon is-small is-left">
+                      <FontAwesomeIcon icon="check-circle"/>
+                      </span>
                     </div>
                   </div>
                   <input

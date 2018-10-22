@@ -29,7 +29,9 @@ img {
 
 .detailsColumn {
   width: 40%;
-  border: 1px solid black;
+  border: 2px solid white;
+  background-image: url('https://i.imgur.com/Ds42QE1.png');
+  border-radius: 15px;
 }
 
 .cardInfoContainer {
