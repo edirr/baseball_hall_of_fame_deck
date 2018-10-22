@@ -121,7 +121,7 @@ class App extends Component {
         <Route exact path="/" render={ (props) =>
           <FilterSearch cards={cards}/>
          }/>
-         <Route exact path="/view/card" render={ (props) =>
+         <Route exact path="/view/card/" render={ (props) =>
           <SingleCard cards={cards}/>
          }/>
          <Route exact path="/mydeck" render={ (props) =>
