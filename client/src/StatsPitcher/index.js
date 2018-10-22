@@ -10,9 +10,10 @@ class StatsPitcher extends Component {
   }
 }
 componentDidMount(){
+  let player_id = this.props.player_id;
   //121961
   // const api_end = `http://lookup-service-prod.mlb.com/json/named.search_player_all.bam?sport_code='mlb'&active_sw='N'&name_part='mantle%25'`
-  const api_end = `http://lookup-service-prod.mlb.com/json/named.sport_career_pitching.bam?league_list_id='mlb'&game_type='R'&player_id='121961'`
+  const api_end = `http://lookup-service-prod.mlb.com/json/named.sport_career_pitching.bam?league_list_id='mlb'&game_type='R'&player_id='${player_id}'`
   const self = this;
   Axios.get(api_end)
   .then(function (response) {
@@ -40,7 +41,7 @@ componentDidMount(){
 }
   render() {
      const { stats } = this.state;
-    console.log(stats)
+    // console.log(stats)
     return (
 
       <div className="pitchContainer">

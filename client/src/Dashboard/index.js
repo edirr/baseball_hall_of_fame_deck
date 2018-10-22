@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import SingleCard from '../SingleCard/';
 import { getCurrentProfile } from '../actions/profileActions';
+import "./style.css";
 
 class Dashboard extends Component {
 
@@ -14,6 +16,7 @@ class Dashboard extends Component {
 			search: '',
 		};
 		this.updateSearch = this.updateSearch.bind(this);
+		this.dynamicSingleCard = this.dynamicSingleCard.bind(this);
 	}
 	componentDidMount() {
 		this.props.getCurrentProfile();
@@ -21,6 +24,12 @@ class Dashboard extends Component {
 	updateSearch(event){
   const self = this;
   self.setState({search: event.target.value});
+}
+
+dynamicSingleCard(card){
+		// console.log(card.target)
+
+		console.log(card.target)
 }
 
 	render() {
@@ -53,12 +62,19 @@ let filteredCards = !profiles
         <div className="control tile is-6 search-form ">
           <input value={this.state.search} onChange={this.updateSearch} className="input" type="text" placeholder="Search Players" />
         </div>
-        <div className='card-list filtered-names'>{
+        <div className="columns card-tainer" />
+        <div className='card-list filtered-names column is-two-fifths'>{
           filteredCards.map((card)=>
-            <Link to="/view/card"><img id="player-img" className="card-img" api_id={card.apiId} src={card.imgUrl} style={{ paddingRight: '25px'}}/><p className="player-name"><strong>{card.name}</strong></p></Link>
+           <div>
+           <img id="player-img" onClick={(card)=>{this.dynamicSingleCard(card)}} className="card-img" api_id={card.apiId} src={card.imgUrl} style={{ paddingRight: '25px'}}/><p className="player-name"><strong>{card.name}</strong></p>
+						<SingleCard api_id={card.apiId} name={card.name} />
+           </div>
+
           )
         }</div>
-        <hr className="line" />
+        <div className='column is-three-fifths'>
+
+        </div>
       </div>
 		);
 	}

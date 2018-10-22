@@ -11,14 +11,17 @@ class PlayerInfo extends Component {
   }
 
   componentDidMount() {
-    const api_end = `http://lookup-service-prod.mlb.com/json/named.search_player_all.bam?sport_code='mlb'&active_sw='N'&name_part='Ted Williams'`;
+    let player_name = this.props.player_name;
+
+    // console.log(this.props);
+    const api_end = `http://lookup-service-prod.mlb.com/json/named.search_player_all.bam?sport_code='mlb'&active_sw='N'&name_part='${player_name}'`;
     const self = this;
     Axios.get(api_end)
       .then(function(response) {
         // console.log(search_player_all.queryResults.row);
 
         let infoData = response.data.search_player_all.queryResults.row;
-        console.log(infoData);
+        // console.log(infoData);
         const info = {
           name: infoData.name_display_first_last,
           wt: infoData.weight,
@@ -29,18 +32,19 @@ class PlayerInfo extends Component {
           born: infoData.birth_date.split("T")[0],
           debut_date: infoData.pro_debut_date.split("T")[0]
         };
-        console.log(info);
+        // console.log(info);
         self.setState({
           info: info
         });
         // console.log(info);
       })
       .catch(function(error) {
-        console.log(error);
+        // console.log(error);
       });
   }
 
   render() {
+
     const { info } = this.state;
     return (
       <div className="infoContainer">
