@@ -6,8 +6,8 @@ import { getCurrentProfile } from '../actions/profileActions';
 
 class Dashboard extends Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			name: '',
 			imgUrl: ''
@@ -18,21 +18,21 @@ class Dashboard extends Component {
 	}
   
 	render() {
+		const { profile:{profile : profiles} } = this.props;
 		const { user } = this.props.auth;
 		const { profile } = this.props.profile;
 		console.log(this.props)
 		return (
 			<div>
 				<h3>Dashboard</h3>
-				<p>{this.props[1]}</p>
+				{
+					!profiles ? [] :
+					profiles.map(({name, imgUrl}) => 
+						<p>{name} <img src={imgUrl} /></p>
+					)
+				}
 			</div>		
 		);
-
-			<h3>Dashboard</h3>
-
-
-
-			)
 	}
 }
 
