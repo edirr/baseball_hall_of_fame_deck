@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import SingleCard from '../SingleCard/';
 import { getCurrentProfile } from '../actions/profileActions';
+import "./style.css";
 
 class Dashboard extends Component {
 
@@ -53,12 +55,15 @@ let filteredCards = !profiles
         <div className="control tile is-6 search-form ">
           <input value={this.state.search} onChange={this.updateSearch} className="input" type="text" placeholder="Search Players" />
         </div>
-        <div className='card-list filtered-names'>{
+        <div className="columns card-tainer" />
+        <div className='card-list filtered-names column is-two-fifths'>{
           filteredCards.map((card)=>
             <Link to="/view/card"><img id="player-img" className="card-img" api_id={card.apiId} src={card.imgUrl} style={{ paddingRight: '25px'}}/><p className="player-name"><strong>{card.name}</strong></p></Link>
           )
         }</div>
-        <hr className="line" />
+        <div className='column is-three-fifths'>
+        <SingleCard/>
+        </div>
       </div>
 		);
 	}
