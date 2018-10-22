@@ -31,7 +31,7 @@ updateSearch(event){
         <div className="control tile is-6 search-form ">
           <input value={this.state.search} onChange={this.updateSearch} className="input" type="text" placeholder="Search Players" />
         </div>
-        <div className='card-list filtered-names'>{filteredCards.map((card)=>{
+        <div className='card-list filtered-names'>{filteredCards.reverse().map((card)=>{
           return(
       <Link to="/view/card"><img id="player-img" className="card-img" id={card.id} src={card.img} /><p className="player-name"><strong>{card.name}</strong></p></Link>
           )

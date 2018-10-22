@@ -46,8 +46,8 @@ img: 'https://sep.yimg.com/ay/autographsforsale/jim-thome-1999-upper-deck-all-st
 },
 {
   id:3,
-  name:"John Schuerholz",
-  img:'https://78.media.tumblr.com/5fc2ce74f233c72d040c76db9d943954/tumblr_p2xvsscybt1vyppq9o1_500.png'
+  name:"Ted Williams",
+  img:'http://www.vintagecardprices.com/pics/2920/209436.jpg'
 },
 {
   id:4,

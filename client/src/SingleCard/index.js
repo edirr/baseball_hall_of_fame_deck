@@ -21,9 +21,7 @@ class SingleCard extends Component {
         <div className="frontAndBack">
           <div className="imgColumn">
 
-            <img src="https://i.imgur.com/IaFEKkj.jpg" />
-
-            <img src={self.props.cards[0].img} />
+            <img src={self.props.cards[2].img} />
             <h4 className="playerName">{/*img component*/}</h4>
 
           </div>
