@@ -21,6 +21,11 @@ import Nav from './Nav';
 import SignUp from './SignUp';
 import FilterSearch from './FilterSearch'
 import Dashboard from './Dashboard';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getCurrentProfile } from './actions/profileActions';
+
 
 import './App.css';
 import 'bulma';
@@ -97,7 +102,23 @@ if(localStorage.jwtToken) {
 
 
 class App extends Component {
+
+  // componentDidMount() {
+  //   this.props.getCurrentProfile();
+  // }
+
   render() {
+    // const {user} = this.props.auth;
+    // const{profile, loading} = this.props.profile
+
+    // let dashboardContent;
+
+    // if (profile === null || loading) {
+    //   dashboardContent = <h4>Loading...</h4>
+    // } else {
+    //   dashboardContent = <h1>Hello!</h1>
+    // }
+
     return (
       <Provider store={store}>
       <BrowserRouter>

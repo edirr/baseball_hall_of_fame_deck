@@ -15,7 +15,6 @@ class SingleCard extends Component {
         <div className="frontAndBack">
           <div className="imgColumn">
             <img src="https://i.imgur.com/IaFEKkj.jpg" />
-            <h4 className="playerName">{/*img component*/}</h4>
           </div>
           <div className="detailsColumn">
             <div className="cardInfoContainer">

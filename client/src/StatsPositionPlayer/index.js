@@ -45,7 +45,7 @@ componentDidMount(){
     console.log(stats)
     return (
       <div className="posContainer">
-        <h1><strong>Position Player Career Totals:</strong></h1>
+        <h2><strong>Position Player Career Totals:</strong></h2>
         <div id="info">
           <p><strong>AVG: </strong>{stats.avg}</p>
           <p><strong>G: </strong>{stats.g}</p>

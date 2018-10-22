@@ -44,7 +44,7 @@ componentDidMount(){
     return (
 
       <div className="pitchContainer">
-        <h1><strong>Pitcher Career Totals:</strong></h1>
+        <h2><strong>Pitcher Career Totals:</strong></h2>
         <div id="info">
           <p><strong>GAMES: </strong>{stats.g}</p>
           <p><strong>IP: </strong>{stats.ip}</p>
