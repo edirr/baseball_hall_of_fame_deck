@@ -16,6 +16,7 @@ class Dashboard extends Component {
 			search: '',
 		};
 		this.updateSearch = this.updateSearch.bind(this);
+		this.dynamicSingleCard = this.dynamicSingleCard.bind(this);
 	}
 	componentDidMount() {
 		this.props.getCurrentProfile();
@@ -23,6 +24,12 @@ class Dashboard extends Component {
 	updateSearch(event){
   const self = this;
   self.setState({search: event.target.value});
+}
+
+dynamicSingleCard(card){
+		// console.log(card.target)
+
+		console.log(card.target)
 }
 
 	render() {
@@ -58,11 +65,15 @@ let filteredCards = !profiles
         <div className="columns card-tainer" />
         <div className='card-list filtered-names column is-two-fifths'>{
           filteredCards.map((card)=>
-            <Link to="/view/card"><img id="player-img" className="card-img" api_id={card.apiId} src={card.imgUrl} style={{ paddingRight: '25px'}}/><p className="player-name"><strong>{card.name}</strong></p></Link>
+           <div>
+           <img id="player-img" onClick={(card)=>{this.dynamicSingleCard(card)}} className="card-img" api_id={card.apiId} src={card.imgUrl} style={{ paddingRight: '25px'}}/><p className="player-name"><strong>{card.name}</strong></p>
+						<SingleCard api_id={card.apiId} name={card.name} />
+           </div>
+
           )
         }</div>
         <div className='column is-three-fifths'>
-        <SingleCard/>
+
         </div>
       </div>
 		);

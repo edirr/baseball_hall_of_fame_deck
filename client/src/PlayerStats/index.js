@@ -10,12 +10,13 @@ class PlayerStats extends Component {
   }
 
   render() {
+    let player_id = this.props.player_id;
     return (
       <div className="statsContainer">
         <div>
-          <StatsPitcher />
+          <StatsPitcher player_id={player_id} />
           <br/>
-          <StatsPositionPlayer />
+          <StatsPositionPlayer player_id={player_id} />
         </div>
       </div>
     );
