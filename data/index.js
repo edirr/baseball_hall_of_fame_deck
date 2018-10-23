@@ -250,6 +250,9 @@ module.exports = {
     ['Lee MacPhail', 1998, 'https://78.media.tumblr.com/f91394a977862c98e4d269b0ae1b8bb6/tumblr_p1yyrnq3La1vyppq9o4_500.png'],
     ['Larry Doby', 1998, 'https://i.pinimg.com/236x/48/b7/16/48b7163b43bb7ad489a6e5a87f83388c.jpg'],
     ['George Davis', 1998, 'https://www.picsofcelebrities.com/celebrity/george-davis-actor/pictures/large/george-davis-actor-images.jpg'],
+    
+
+// START SEEDING DATA ON MLAB FROM HERE
     ['Robin Yount', 1999, 'https://sep.yimg.com/ay/collecting-sports-cards/1979-topps-95-robin-yount-baseball-card-milwaukee-brewers-2.gif'],
     ['Smokey Joe Williams', 1999, 'https://78.media.tumblr.com/d8e7527ef67badfe5e2a4239e5691da1/tumblr_p1zc3jLLby1vyppq9o2_500.png'],
     ['Frank Selee', 1999, 'http://www.zeprock.com/Images/HOF/FS1.jpg'],
