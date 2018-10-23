@@ -17,7 +17,7 @@
 }
 
 .container {
-  padding: 40px 70px;
+  padding-top: 40px;
 }
 
 .line {
@@ -26,5 +26,5 @@
 }
 
 .control {
-  padding-bottom: 40px;
+/*  padding-bottom: 40px;*/
 }

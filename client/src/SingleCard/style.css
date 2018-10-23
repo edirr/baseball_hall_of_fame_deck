@@ -1,1 +1,45 @@
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  min-height: 610px;
+  width: 80%;
+}
 
+.frontAndBack {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+
+.detailsColumn {
+  width: 200px;
+  padding: 10px;
+}
+
+.imgColumn {
+/*  width: 25%;
+*/}
+
+/*img {
+  height: 350px;
+  width: 250px;
+}
+*/
+.detailsColumn {
+/*  width: 40%;*/
+  border: 2px solid white;
+  background-image: url('https://i.imgur.com/Ds42QE1.png');
+  border-radius: 15px;
+}
+
+.cardInfoContainer {
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.cardStatsContainer {
+  border-radius: 30px;
+}
