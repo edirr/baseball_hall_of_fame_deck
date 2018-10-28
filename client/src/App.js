@@ -118,7 +118,7 @@ class App extends Component {
         <Nav />
       <div className="pageContent">
         <Switch>
-        <Route exact path="/" render={ (props) =>
+         <Route exact path="/placeholder" render={ (props) =>
           <FilterSearch cards={cards}/>
          }/>
          <Route exact path="/view/card" render={ (props) =>
@@ -127,7 +127,7 @@ class App extends Component {
          <Route exact path="/mydeck" render={ (props) =>
           <MyDeck cards={cards}/>
          }/>
-        <Route exact path="/dashboard" component={ Dashboard }/>
+        <Route exact path="/" component={ Dashboard }/>
         <Route exact path="/about" component={ AboutPage }/>
         <Route exact path="/login" component={LoginForm}/>
         <Route exact path="/register" component={SignUp}/>

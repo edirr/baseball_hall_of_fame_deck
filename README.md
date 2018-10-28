@@ -1,6 +1,8 @@
 ## Deck of Legends App
 *(Working title)*
 
+Heroku App - https://glacial-falls-95100.herokuapp.com
+
 
 Love collecting sports trading cards? Interested in easily finding facts and statistics about a MLB Hall of Famer? 
 We are a virtual baseball card collecting app for Hall of Fame players. Add your favorite players to your deck and show off your sweet collection to your friends!
